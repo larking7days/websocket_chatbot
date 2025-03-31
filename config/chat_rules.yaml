@@ -1,0 +1,11 @@
+workflows:
+  feedback:
+    trigger_keywords: ["feedback", "review"]
+    response: "Please rate your experience from 1-5. 1 is the worst, 5 is the best."
+    next_step: "collect_rating"
+
+sentiment:
+  api_endpoint: "https://api.openai.com/v1/embeddings"
+  thresholds:
+    positive: 0.6
+    negative: 0.4
